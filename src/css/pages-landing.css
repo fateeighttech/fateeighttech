@@ -736,7 +736,16 @@ body.has-fixed-cta {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .hero-fullscreen::before,
+  .hero-fullscreen::after {
+    animation: none !important;
+  }
+
   .hero-fullscreen .scroll-arrow {
+    animation: none !important;
+  }
+
+  .hero-content {
     animation: none !important;
   }
 }

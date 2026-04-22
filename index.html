@@ -2,24 +2,14 @@
 <html lang="pt-BR">
 
 <head>
-    <!-- Preconnect (reduz latência em recursos externos) -->
+    <meta charset="UTF-8">
+    <!-- Preconnect (recursos externos — após charset para early hints) -->
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preconnect" href="https://www.google.com" crossorigin>
-    <!-- Preload LCP (imagem crítica do hero) -->
-    <link rel="preload" as="image" href="src/images/logos/logo-hero.jpg">
-
-    <!-- Google Tag Manager (defer para não bloquear LCP) -->
-    <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-            var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-N3N22PZX');
-    </script>
+    <!-- Preload LCP: WebP (menor que JPG; picture abaixo mantém fallback) -->
+    <link rel="preload" as="image" href="src/images/logos/logo-hero.webp" type="image/webp">
 
     <!-- Meta Básico -->
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0d1117">
@@ -61,15 +51,6 @@
     <noscript>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </noscript>
-
-    <!-- Google tag (gtag.js) Ads — base em todas as páginas -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17673039996"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'AW-17673039996');
-    </script>
 </head>
 
 <body>
@@ -122,8 +103,11 @@
     <section id="home" class="hero-fullscreen">
         <div class="hero-content">
             <div class="hero-logo">
-                <img src="src/images/logos/logo-hero.jpg" alt="Fate Eight Tech" class="hero-logo-img" width="370"
-                    height="370" fetchpriority="high" loading="eager" decoding="async">
+                <picture>
+                    <source srcset="src/images/logos/logo-hero.webp" type="image/webp">
+                    <img src="src/images/logos/logo-hero.jpg" alt="Fate Eight Tech" class="hero-logo-img" width="370"
+                        height="370" fetchpriority="high" loading="eager" decoding="async">
+                </picture>
             </div>
             <h1 class="hero-title">Sites e Google Ads que trazem leads qualificados</h1>
             <p class="hero-subtitle">Landing pages rápidas, rastreamento de conversões e gestão de campanhas — foco em
@@ -931,6 +915,10 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <script>
+        window.FE_SITE_ANALYTICS = { gtm: 'GTM-N3N22PZX', adsId: 'AW-17673039996' };
+    </script>
+    <script src="src/js/third-party-analytics.js" defer></script>
     <script src="src/js/main.js" defer></script>
 
 </body>

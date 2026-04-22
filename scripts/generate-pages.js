@@ -41,18 +41,13 @@ function renderHead(meta) {
 <meta name="description" content="${descEsc}">
 <link rel="canonical" href="https://fateeight.com.br/${meta.canonicalPath}">
 <title>${titleEsc}</title>
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link rel="icon" href="${ASSET_PREFIX}src/images/logos/favicon.png" type="image/png">
 <link rel="stylesheet" href="${ASSET_PREFIX}src/css/style.css">
 <link rel="stylesheet" href="${ASSET_PREFIX}src/css/pages-landing.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17673039996"></script>
-<script>
-window.dataLayer=window.dataLayer||[];
-function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());
-gtag('config','AW-17673039996');
-</script>
 </head>`;
 }
 
@@ -161,7 +156,7 @@ function buildHtml(meta, paths, data, faqId, faqs) {
         chrome.siteCookieBanner() +
         '\n' +
         chrome.siteFloatingWidgets() +
-        `\n<script src="${ASSET_PREFIX}src/js/main.js" defer></script>\n</body>\n</html>`
+        `\n<script src="${ASSET_PREFIX}src/js/third-party-analytics.js" defer></script>\n<script src="${ASSET_PREFIX}src/js/main.js" defer></script>\n</body>\n</html>`
     );
 }
 
