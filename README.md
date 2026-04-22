@@ -102,7 +102,7 @@ Está pronto para **transformar sua presença digital**? Fale com a gente!
 
 <div align="center">
 
-**© 2025 Fate Eight Tech — Todos os direitos reservados.**
+**© 2026 Fate Eight Tech — Todos os direitos reservados.**
 
 *Desenvolvemos o digital. Crescemos juntos.*
 
