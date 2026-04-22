@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description"
+        content="Contato Fate Eight Tech — formulário com reCAPTCHA, honeypot e envio seguro. Sites, Google Ads e marketing digital em Brasília e Brasil.">
+    <link rel="canonical" href="https://fateeight.com.br/contato.html">
+    <title>Contato | Fate Eight Tech — Orçamento</title>
+    <link rel="icon" type="image/png" href="src/images/logos/favicon.png">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/pages-landing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print"
+        onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17673039996"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-17673039996');
+    </script>
+</head>
+
+<body>
+    <a href="#contato" class="skip-link">Pular para o formulário</a>
+    <header class="header scrolled">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <img src="src/images/logos/logo-32x32.png" alt="Fate Eight Tech Logo" class="logo-img" width="50"
+                            height="50" loading="eager">
+                        <a href="index.html" style="text-decoration: none; color: inherit;">
+                            <span class="logo-text">Fate<span>Eight</span> Tech</span>
+                        </a>
+                    </div>
+                    <button type="button" class="mobile-menu-toggle" aria-label="Abrir menu">
+                        <span></span><span></span><span></span>
+                    </button>
+                    <ul class="nav-menu">
+                        <li><a href="index.html#home" class="nav-link">Home</a></li>
+                        <li><a href="index.html#servicos" class="nav-link">Serviços</a></li>
+                        <li><a href="index.html#portfolio" class="nav-link">Portfólio</a></li>
+                        <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+                        <li><a href="contato.html" class="nav-link active">Contato</a></li>
+                        <li><a href="en/index.html" class="nav-link" lang="en" hreflang="en">EN</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Contato e orçamento</h1>
+            <p class="lead-page">Envie sua mensagem com segurança. Campos obrigatórios, verificação anti-spam e resposta por e-mail.</p>
+        </div>
+    </section>
+
+    <section id="contato" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2 class="sr-only">Canais diretos</h2>
+                    <h3>Fale Conosco</h3>
+                    <p>Atendimento 24/7. Também pode usar o WhatsApp após confirmar sua intenção na janela de segurança.</p>
+                    <div class="availability-badge">
+                        <i class="fas fa-clock" aria-hidden="true"></i>
+                        <span>Atendimento 24/7</span>
+                    </div>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <a href="https://wa.me/556190448973?text=Olá%2C%20gostaria%20de%20fazer%20um%20orçamento." class="js-wa-qualified" target="_blank" rel="noopener noreferrer">(61) 9 9044-8973</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                            <div>
+                                <h4>E-mail</h4>
+                                <a href="mailto:fateeighttechcontato@gmail.com">fateeighttechcontato@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm" method="post" action="#" novalidate>
+                    <div style="display:none;" aria-hidden="true">
+                        <label for="company_hp">Empresa</label>
+                        <input type="text" id="company_hp" name="company" autocomplete="off" tabindex="-1" value="">
+                    </div>
+                    <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off" value="">
+
+                    <div class="form-row form-row-2">
+                        <div class="form-group">
+                            <label for="name">Nome Completo *</label>
+                            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Seu nome completo">
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" required autocomplete="email" placeholder="seu@email.com">
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+                    <div class="form-row form-row-2">
+                        <div class="form-group">
+                            <label for="phone">Telefone *</label>
+                            <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="(00) 00000-0000">
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Serviço de Interesse *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Selecione um serviço</option>
+                                <option value="criacao-site">Criação de Site Profissional</option>
+                                <option value="manutencao-site">Manutenção de Site</option>
+                                <option value="otimizacao-seo">Otimização SEO</option>
+                                <option value="hospedagem-dominio">Hospedagem e Domínio</option>
+                                <option value="google-ads">Google Ads</option>
+                                <option value="instagram-facebook-ads">Instagram / Facebook Ads</option>
+                                <option value="tiktok-ads">TikTok Ads</option>
+                                <option value="gestao-midias">Gestão de Mídias Sociais</option>
+                                <option value="google-meu-negocio">Google Meu Negócio</option>
+                                <option value="design-ui-ux">Design UI & UX</option>
+                                <option value="multiplos">Múltiplos Serviços</option>
+                            </select>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Descreva seu projeto ou dúvida (sem links externos na primeira mensagem)."></textarea>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-recaptcha">
+                        <div class="g-recaptcha" data-sitekey="6LfsPvkrAAAAAAiUhmmX6X05cBHj95l2A8yqnVd_"></div>
+                    </div>
+                    <input type="hidden" name="redirectTo" value="obrigado.html">
+                    <input type="hidden" name="apiKey" value="sf_ieke4i8a01gjchnhil47ja6k">
+
+                    <div class="form-buttons">
+                        <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+                        <a href="https://wa.me/556190448973?text=Olá%2C%20gostaria%20de%20fazer%20um%20orçamento." class="btn btn-whatsapp js-wa-qualified" target="_blank" rel="noopener noreferrer">WhatsApp qualificado</a>
+                    </div>
+
+                    <div id="form-status-message" aria-live="polite"></div>
+
+                    <p class="privacy-notice">
+                        Ao enviar, você concorda com nossa
+                        <a href="privacidade.html" target="_blank" rel="noopener noreferrer">Política de Privacidade</a>.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="src/images/logos/logo-32x32.png" alt="Fate Eight Tech" class="footer-logo-img" width="50" height="50" loading="lazy">
+                        <h3>Fate<span>Eight</span> Tech</h3>
+                    </div>
+                    <p>Assim como 8 bits criam a base da informação, nós criamos a base do seu sucesso.</p>
+                    <div class="footer-social">
+                        <a href="https://wa.me/556190448973?text=Olá%2C%20gostaria%20de%20fazer%20um%20orçamento." class="js-wa-qualified" target="_blank"
+                            rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://instagram.com/fateeighttech" target="_blank" aria-label="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@FateEightTech" target="_blank" aria-label="YouTube"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61582108484785" target="_blank"
+                            aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://github.com/fateeighttech" target="_blank" aria-label="Github"><i
+                                class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="servicos/criacao-de-site-profissional.html">Criação de Site</a></li>
+                        <li><a href="servicos/google-ads.html">Google Ads</a></li>
+                        <li><a href="servicos/otimizacao-seo.html">SEO</a></li>
+                        <li><a href="index.html#anuncio-pago">Anúncio Pago</a></li>
+                        <li><a href="servicos/gestao-de-midias-sociais.html">Gestão de Mídias</a></li>
+                        <li><a href="servicos/google-meu-negocio.html">Google Meu Negócio</a></li>
+                        <li><a href="contato.html">Orçamento</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#servicos">Serviços</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="index.html#portfolio">Portfólio</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="https://wa.me/556190448973?text=Olá%2C%20gostaria%20de%20fazer%20um%20orçamento." class="js-wa-qualified" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><i class="fab fa-whatsapp"></i> (61) 9 9044-8973</li>
+                        <li><i class="fab fa-instagram"></i> @fateeighttech</li>
+                        <li><i class="fab fa-youtube"></i> @FateEightTech</li>
+                        <li><i class="fab fa-facebook"></i> @fateeighttech</li>
+                        <li><i class="fab fa-github"></i> fateeighttech</li>
+                        <li><i class="fas fa-clock"></i> Atendimento 24/7</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2026</span> Fate Eight Tech. Todos os direitos reservados.</p>
+                <div class="footer-links">
+                    <a href="termos.html">Termos de Serviço</a>
+                    <span>|</span>
+                    <a href="privacidade.html">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cookie-banner">
+        <span>Este site pode usar cookies conforme políticas do Google.
+            <a href="https://policies.google.com/technologies/cookies?hl=pt-BR" target="_blank" rel="noopener noreferrer">Saiba mais.</a>
+        </span>
+        <a href="#" id="cookie-accept">Ok</a>
+    </div>
+
+    <a href="https://wa.me/556190448973?text=Olá%2C%20gostaria%20de%20fazer%20um%20orçamento." class="whatsapp-float js-wa-qualified"
+        target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp com confirmação">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <button type="button" class="scroll-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="src/js/main.js" defer></script>
+</body>
+
+</html>

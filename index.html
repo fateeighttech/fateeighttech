@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Preconnect (reduz latência em recursos externos) -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://www.google.com" crossorigin>
+    <!-- Preload LCP (imagem crítica do hero) -->
+    <link rel="preload" as="image" href="src/images/logos/logo-hero.jpg">
+
+    <!-- Google Tag Manager (defer para não bloquear LCP) -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-N3N22PZX');
+    </script>
+
+    <!-- Meta Básico -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0d1117">
+
+    <!-- SEO e Marketing -->
+    <meta name="description"
+        content="Criação de sites, manutenção, SEO, tráfego pago, Google Ads, Instagram Ads, Facebook Ads, gestão de mídias sociais e Google Meu Negócio. Soluções digitais completas para sua empresa.">
+    <meta name="keywords"
+        content="criação de site, manutenção de site, otimização SEO, Google Ads, Instagram Ads, Facebook Ads, TikTok Ads, gestão de mídias sociais, Google Meu Negócio, design UI UX, Fate Eight Tech, marketing digital, tráfego pago">
+    <meta name="author" content="Fate Eight Tech">
+
+    <!-- Open Graph (para Facebook, WhatsApp, LinkedIn etc.) -->
+    <meta property="og:title" content="Desenvolva seu Site e Anuncie no Google | Fate Eight Tech">
+    <meta property="og:description"
+        content="Transforme sua presença digital com sites modernos e campanhas eficientes no Google Ads. Fale com a Fate Eight Tech e expanda seus resultados.">
+    <meta property="og:image" content="https://fateeight.com.br/src/images/logos/logo-hero.jpg">
+    <meta property="og:url" content="https://fateeight.com.br/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card (para X/Twitter) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fate Eight Tech - Sites e Google Ads">
+    <meta name="twitter:description"
+        content="Desenvolvemos sites e gerenciamos campanhas no Google Ads para negócios que querem crescer online.">
+    <meta name="twitter:image" content="https://fateeight.com.br/src/images/logos/logo-hero.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="src/images/logos/favicon.png">
+
+    <!-- Título -->
+    <title>Desenvolva seu Site e Anuncie no Google | Fate Eight Tech</title>
+
+    <!-- Estilos -->
+    <link rel="canonical" href="https://fateeight.com.br/">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/pages-landing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <!-- Google tag (gtag.js) Ads — base em todas as páginas -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17673039996"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-17673039996');
+    </script>
+</head>
+
+<body>
+    <a href="#home" class="skip-link">Pular para o conteúdo</a>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3N22PZX" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <img src="src/images/logos/logo-32x32.png" alt="Fate Eight Tech Logo" class="logo-img" width="50" height="50" loading="eager" decoding="async">
+                        <a href="#home" style="text-decoration: none; color: inherit;">
+                            <span class="logo-text">Fate<span>Eight</span> Tech</span>
+                        </a>
+                    </div>
+                    <button class="mobile-menu-toggle" aria-label="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu">
+                        <li><a href="#home" class="nav-link active">Home</a></li>
+                        <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                        <li><a href="#anuncio-pago" class="nav-link">Anúncio Pago</a></li>
+                        <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+                        <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+                        <li><a href="contato.html" class="nav-link">Contato</a></li>
+                        <li><a href="en/index.html" class="nav-link" lang="en" hreflang="en">EN</a></li>
+                    </ul>
+                    <div class="fe-contact-wrap">
+                        <a class="fe-contact-btn js-wa-qualified" role="button" aria-label="Converse conosco no WhatsApp"
+                            href="https://wa.me/556190448973?text=Olá%2C%20gostaria%20de%20fazer%20um%20orçamento."
+                            data-contact-url="https://wa.me/556190448973?text=Olá, gostaria de fazer um orçamento."
+                            target="_blank" rel="noopener noreferrer">
+                            <span class="fab fa-whatsapp" aria-hidden="true"></span>
+                            <span class="fe-btn-text">Converse conosco <span class="fe-hide-mobile">agora</span></span>
+                            <span class="fe-btn-border"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-fullscreen">
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="src/images/logos/logo-hero.jpg" alt="Fate Eight Tech" class="hero-logo-img" width="370" height="370" fetchpriority="high" loading="eager" decoding="async">
+            </div>
+            <h1 class="hero-title">Sites e Google Ads que trazem leads qualificados</h1>
+            <p class="hero-subtitle">Landing pages rápidas, rastreamento de conversões e gestão de campanhas — foco em performance e proteção contra cliques inválidos.</p>
+            <div class="hero-buttons">
+                <a href="contato.html" class="btn btn-primary">Pedir orçamento</a>
+                <a href="#servicos" class="btn btn-secondary">Ver serviços</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span class="scroll-indicator-label">Role para baixo</span>
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="social-proof" aria-labelledby="social-proof-title">
+        <div class="container">
+            <h2 id="social-proof-title" class="sr-only">Prova social e resultados</h2>
+            <div class="social-proof-grid">
+                <div class="social-proof-stat">
+                    <strong>50+</strong>
+                    <span>projetos entregues (sites, ads e integrações)</span>
+                </div>
+                <div class="social-proof-stat">
+                    <strong>24/7</strong>
+                    <span>atendimento e suporte contínuo</span>
+                </div>
+                <div class="social-proof-stat">
+                    <strong>5+</strong>
+                    <span>anos em desenvolvimento e marketing digital</span>
+                </div>
+            </div>
+            <blockquote class="social-proof-quote" cite="https://fateeight.com.br">
+                “Campanhas no Google com landing alinhada ao anúncio reduzem custo por lead e aumentam qualidade — é o que aplicamos em cada projeto.”
+                <cite>— Equipe Fate Eight Tech</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section id="beneficios" class="beneficios" aria-labelledby="beneficios-title">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="beneficios-title" class="section-title">Benefícios para quem investe em performance</h2>
+                <p class="section-subtitle">Menos atrito no funil, mais previsibilidade e mensuração clara</p>
+            </div>
+            <div class="beneficios-grid">
+                <article class="beneficio-card">
+                    <i class="fas fa-bolt" aria-hidden="true"></i>
+                    <h3>Páginas rápidas</h3>
+                    <p>Tempo de carregamento enxuto, imagens otimizadas e CSS enxuto — melhor Quality Score e experiência.</p>
+                </article>
+                <article class="beneficio-card">
+                    <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                    <h3>Anti-spam no formulário</h3>
+                    <p>Honeypot, reCAPTCHA e heurísticas de comportamento para leads mais confiáveis.</p>
+                </article>
+                <article class="beneficio-card">
+                    <i class="fas fa-chart-line" aria-hidden="true"></i>
+                    <h3>Rastreamento correto</h3>
+                    <p>Tag de conversão e eventos para auditoria no Tag Assistant e otimização contínua.</p>
+                </article>
+                <article class="beneficio-card">
+                    <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                    <h3>Mobile-first</h3>
+                    <p>Navegação por teclado, contraste e layouts responsivos que convertem em qualquer tela.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossos Serviços</h2>
+                <p class="section-subtitle">Soluções completas para impulsionar sua empresa no ambiente digital</p>
+            </div>
+
+            <h3 class="service-category-title">Serviços Web</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="src/images/servicos/criacao-site.webp" alt="Criação de Site" width="360" height="140" loading="lazy"
+                            onerror="this.src='src/images/servicos/placeholder.svg';">
+                    </div>
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Criação de Site Profissional</h3>
+                    <p>Sites institucionais, landing pages, e-commerce e aplicações web modernas e responsivas</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Design Responsivo</li>
+                        <li><i class="fas fa-check"></i> SEO Otimizado</li>
+                        <li><i class="fas fa-check"></i> Performance Otimizada</li>
+                    </ul>
+                    <a href="servicos/criacao-de-site-profissional.html" class="btn btn-outline">Saiba mais</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="src/images/servicos/manutencao-site.webp" alt="Manutenção de Site" width="360" height="140" loading="lazy"
+                            onerror="this.src='src/images/servicos/placeholder.svg';">
+                    </div>
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Manutenção de Site</h3>
+                    <p>Mantenha seu site atualizado, seguro e funcionando perfeitamente com suporte contínuo</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Atualização de Textos e Imagens</li>
+                        <li><i class="fas fa-check"></i> Correção de Falhas</li>
+                        <li><i class="fas fa-check"></i> Segurança e Backups</li>
+                    </ul>
+                    <a href="servicos/manutencao-de-site.html" class="btn btn-outline">Saiba mais</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="src/images/servicos/seo.webp" alt="Otimização SEO" width="360" height="140" loading="lazy"
+                            onerror="this.src='src/images/servicos/placeholder.svg';">
+                    </div>
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Otimização SEO</h3>
+                    <p>Melhore seu posicionamento nos buscadores e atraia mais visitantes qualificados</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Análise e Ajustes Técnicos</li>
+                        <li><i class="fas fa-check"></i> Palavras-chave Estratégicas</li>
+                        <li><i class="fas fa-check"></i> Melhoria de Conversão</li>
+                    </ul>
+                    <a href="servicos/otimizacao-seo.html" class="btn btn-outline">Saiba mais</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="src/images/servicos/hospedagem.webp" alt="Hospedagem e Domínio" width="360" height="140" loading="lazy"
+                            onerror="this.src='src/images/servicos/placeholder.svg';">
+                    </div>
+                    <div class="service-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Hospedagem e Domínio</h3>
+                    <p>Registramos seu domínio e oferecemos hospedagem segura com SSL, backup e suporte 24h</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Certificado SSL Incluso</li>
+                        <li><i class="fas fa-check"></i> Ambiente Seguro</li>
+                        <li><i class="fas fa-check"></i> Backup Automático</li>
+                    </ul>
+                    <a href="servicos/hospedagem-e-dominio.html" class="btn btn-outline">Saiba mais</a>
+                </div>
+            </div>
+
+            <h3 class="service-category-title">Marketing e Design</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="src/images/servicos/gestao-midias.webp" alt="Gestão de Mídias Sociais" width="360" height="140" loading="lazy"
+                            onerror="this.src='src/images/servicos/placeholder.svg';">
+                    </div>
+                    <div class="service-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3>Gestão de Mídias Sociais</h3>
+                    <p>Curadoria e publicação de conteúdo para fortalecer sua presença digital</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Publicação Estratégica</li>
+                        <li><i class="fas fa-check"></i> Resposta a Comentários</li>
+                        <li><i class="fas fa-check"></i> Relatórios de Engajamento</li>
+                    </ul>
+                    <a href="servicos/gestao-de-midias-sociais.html" class="btn btn-outline">Saiba mais</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="src/images/servicos/google-meu-negocio.webp" alt="Google Meu Negócio" width="360" height="140" loading="lazy"
+                            onerror="this.src='src/images/servicos/placeholder.svg';">
+                    </div>
+                    <div class="service-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>Google Meu Negócio</h3>
+                    <p>Otimize sua ficha no Google para aparecer em buscas locais e ganhar mais visibilidade</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Cadastro e Verificação</li>
+                        <li><i class="fas fa-check"></i> Fotos e Avaliações</li>
+                        <li><i class="fas fa-check"></i> Insights de Visitas</li>
+                    </ul>
+                    <a href="servicos/google-meu-negocio.html" class="btn btn-outline">Saiba mais</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="src/images/servicos/design-ui-ux.webp" alt="Design UI & UX" width="360" height="140" loading="lazy"
+                            onerror="this.src='src/images/servicos/placeholder.svg';">
+                    </div>
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Design UI & UX</h3>
+                    <p>Interfaces intuitivas e experiências de usuário que convertem visitantes em clientes</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Protótipos e Wireframes</li>
+                        <li><i class="fas fa-check"></i> Usabilidade</li>
+                        <li><i class="fas fa-check"></i> Identidade Visual</li>
+                    </ul>
+                    <a href="servicos/design-ui-ux.html" class="btn btn-outline">Saiba mais</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="site-completo" class="site-completo">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Site Completo</h2>
+                <p class="section-subtitle">Tudo que sua empresa precisa para uma presença digital profissional</p>
+            </div>
+            <div class="site-completo-grid">
+                <div class="site-completo-card">
+                    <div class="site-completo-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Criação</h3>
+                    <p>Site completo sob medida para sua empresa, com visual profissional e tecnologias avançadas</p>
+                </div>
+                <div class="site-completo-card">
+                    <div class="site-completo-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Hospedagem</h3>
+                    <p>Ambiente seguro com SSL, suporte 24h, backup e proteção contra ataques</p>
+                </div>
+                <div class="site-completo-card">
+                    <div class="site-completo-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Domínio</h3>
+                    <p>Registramos seu domínio para garantir seu nome e sua marca na internet</p>
+                </div>
+                <div class="site-completo-card">
+                    <div class="site-completo-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Manutenção</h3>
+                    <p>Site sempre atualizado com textos, fotos e vídeos sempre que você precisar</p>
+                </div>
+            </div>
+            <p class="site-completo-cta">Entre em contato e receba um orçamento personalizado para o seu projeto.</p>
+            <a href="contato.html" class="btn btn-primary">Pedir orçamento</a>
+        </div>
+    </section>
+
+    <section id="anuncio-pago" class="anuncio-pago">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Anúncio Pago</h2>
+                <p class="section-subtitle">Alcance seu público e multiplique resultados com tráfego pago</p>
+            </div>
+            <div class="anuncio-pago-grid">
+                <a href="servicos/google-ads.html" class="anuncio-card">
+                    <div class="anuncio-card-image">
+                        <img src="src/images/ads/google-ads.webp" alt="Google Ads" width="300" height="180" loading="lazy"
+                            onerror="this.src='src/images/ads/placeholder.svg';">
+                    </div>
+                    <h3>Google Ads</h3>
+                    <span class="btn btn-outline btn-sm">Saiba mais</span>
+                </a>
+                <a href="servicos/instagram-ads.html" class="anuncio-card">
+                    <div class="anuncio-card-image">
+                        <img src="src/images/ads/instagram-ads.webp" alt="Instagram Ads" width="300" height="180" loading="lazy"
+                            onerror="this.src='src/images/ads/placeholder.svg';">
+                    </div>
+                    <h3>Instagram Ads</h3>
+                    <span class="btn btn-outline btn-sm">Saiba mais</span>
+                </a>
+                <a href="servicos/facebook-ads.html" class="anuncio-card">
+                    <div class="anuncio-card-image">
+                        <img src="src/images/ads/facebook-ads.webp" alt="Facebook Ads" width="300" height="180" loading="lazy"
+                            onerror="this.src='src/images/ads/placeholder.svg';">
+                    </div>
+                    <h3>Facebook Ads</h3>
+                    <span class="btn btn-outline btn-sm">Saiba mais</span>
+                </a>
+                <a href="servicos/tiktok-ads.html" class="anuncio-card">
+                    <div class="anuncio-card-image">
+                        <img src="src/images/ads/tiktok-ads.webp" alt="TikTok Ads" width="300" height="180" loading="lazy"
+                            onerror="this.src='src/images/ads/placeholder.svg';">
+                    </div>
+                    <h3>TikTok Ads</h3>
+                    <span class="btn btn-outline btn-sm">Saiba mais</span>
+                </a>
+                <a href="servicos/gestao-de-midias-sociais.html" class="anuncio-card">
+                    <div class="anuncio-card-image">
+                        <img src="src/images/ads/gestao-midias.webp" alt="Gestão de Mídias Sociais" width="300" height="180" loading="lazy"
+                            onerror="this.src='src/images/ads/placeholder.svg';">
+                    </div>
+                    <h3>Gestão de Mídias Sociais</h3>
+                    <span class="btn btn-outline btn-sm">Saiba mais</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="destaques-extras">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mais Serviços</h2>
+                <p class="section-subtitle">Soluções que fazem a diferença no seu negócio</p>
+            </div>
+            <div class="destaques-grid">
+                <a href="servicos/google-meu-negocio.html" class="destaque-card">
+                    <div class="destaque-card-image">
+                        <img src="src/images/destaques/google-meu-negocio.webp" alt="Google Meu Negócio" width="360" height="200" loading="lazy"
+                            onerror="this.src='src/images/destaques/placeholder.svg';">
+                    </div>
+                    <h3><i class="fas fa-store"></i> Google Meu Negócio</h3>
+                    <p>Apareça nas buscas locais e ganhe mais clientes</p>
+                </a>
+                <a href="servicos/design-ui-ux.html" class="destaque-card">
+                    <div class="destaque-card-image">
+                        <img src="src/images/destaques/design-ui-ux.webp" alt="Design UI & UX" width="360" height="200" loading="lazy"
+                            onerror="this.src='src/images/destaques/placeholder.svg';">
+                    </div>
+                    <h3><i class="fas fa-palette"></i> Design UI & UX</h3>
+                    <p>Interfaces que convertem visitantes em clientes</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="marketing-detail">
+        <div class="container">
+            <div class="marketing-content">
+                <div class="marketing-text">
+                    <h2>Google Ads: Sua Empresa no Topo das Buscas no Google</h2>
+                    <p class="lead">Transforme cliques em clientes com estratégias comprovadas de marketing digital</p>
+                    <div class="marketing-features">
+                        <div class="marketing-feature">
+                            <i class="fas fa-chart-line"></i>
+                            <div>
+                                <h4>Gestão de Campanhas</h4>
+                                <p>Criação e gerenciamento estratégico de campanhas de busca, display, shopping e vídeo
+                                </p>
+                            </div>
+                        </div>
+                        <div class="marketing-feature">
+                            <i class="fas fa-search-dollar"></i>
+                            <div>
+                                <h4>Otimização Contínua</h4>
+                                <p>Monitoramento diário, testes A/B e ajustes para maximizar conversões e reduzir custos
+                                </p>
+                            </div>
+                        </div>
+                        <div class="marketing-feature">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            <div>
+                                <h4>Relatórios de Desempenho</h4>
+                                <p>Dashboards personalizados com métricas detalhadas: impressões, cliques, conversões e
+                                    ROI (Retorno Do Investimento)</p>
+                            </div>
+                        </div>
+                        <div class="marketing-feature">
+                            <i class="fas fa-bullseye"></i>
+                            <div>
+                                <h4>Segmentação Inteligente</h4>
+                                <p>Alcance seu público-alvo ideal com precisão através de dados demográficos e
+                                    comportamentais</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="empresa" class="about teaser-about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Sobre a Fate Eight Tech</h2>
+                    <p class="lead">Desenvolvimento web, landing pages orientadas a conversão e gestão de Google Ads com métricas claras.</p>
+                    <p>Atuamos para reduzir desperdício de mídia, melhorar mensuração e entregar páginas rápidas e acessíveis — do DF para projetos em todo o Brasil.</p>
+                    <p><a href="sobre.html" class="btn btn-primary">Ler mais sobre a empresa</a></p>
+                </div>
+                <div class="about-image">
+                    <div class="about-logo-frame">
+                        <img src="src/images/about/about.webp" alt="" width="280" height="280" loading="lazy"
+                            onerror="this.src='src/images/logos/logo-hero.jpg'; this.alt='Fate Eight Tech';">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Portfólio</h2>
+                <p class="section-subtitle">Projetos que geraram resultados reais para nossos clientes</p>
+            </div>
+            <div class="portfolio-grid">
+                <a href="https://www.globalsolucaodedetizadora.com.br/" target="_blank" rel="noopener noreferrer" class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="src/images/portfolio/global-solucao.webp" alt="Global Solução - Site desenvolvido pela Fate Eight Tech" width="400" height="250" loading="lazy"
+                            onerror="this.src='src/images/portfolio/placeholder.svg'; this.alt='Preview Global Solução';">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Global Solução</h3>
+                        <p class="portfolio-result">+150% vendas em 3 meses com Google Ads</p>
+                        <span class="portfolio-tag">Landing Page + Google Ads</span>
+                    </div>
+                </a>
+                <a href="https://xequemateservicos.com.br/" target="_blank" rel="noopener noreferrer" class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="src/images/portfolio/xequemate.webp" alt="Xequemate Serviços - Site desenvolvido pela Fate Eight Tech" width="400" height="250" loading="lazy"
+                            onerror="this.src='src/images/portfolio/placeholder.svg'; this.alt='Preview Xequemate';">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Xequemate Serviços</h3>
+                        <p class="portfolio-result">Aumento de 30% no número de clientes em 3 meses com Tecnologia MPI</p>
+                        <span class="portfolio-tag">Site + Google Ads + Google Meu Negócio</span>
+                    </div>
+                </a>
+                <a href="https://exemplardesentupidora.com.br/" target="_blank" rel="noopener noreferrer" class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="src/images/portfolio/exemplar-desentupidora.webp" alt="Exemplar Desentupidora - Site desenvolvido pela Fate Eight Tech" width="400" height="250" loading="lazy"
+                            onerror="this.src='src/images/portfolio/placeholder.svg'; this.alt='Preview Exemplar Desentupidora';">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Exemplar Desentupidora</h3>
+                        <p class="portfolio-result">Site institucional — atendimento 24h em Brasília-DF e entorno</p>
+                        <span class="portfolio-tag">Site institucional + SEO local</span>
+                    </div>
+                </a>
+                <a href="https://barao-do-grao.vercel.app/" target="_blank" rel="noopener noreferrer" class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="src/images/portfolio/barao-do-grao.webp" alt="Barão do Grão - Site desenvolvido pela Fate Eight Tech" width="400" height="250" loading="lazy"
+                            onerror="this.src='src/images/portfolio/placeholder.svg'; this.alt='Preview Barão do Grão';">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Barão do Grão</h3>
+                        <p class="portfolio-result">Cafés especiais, torra artesanal e presença institucional completa</p>
+                        <span class="portfolio-tag">Site institucional · link provisório (demo Vercel)</span>
+                    </div>
+                </a>
+                <a href="https://dxdedetizadora.com.br/" target="_blank" rel="noopener noreferrer" class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="src/images/portfolio/dx-dedetizadora.webp" alt="DX Dedetizadora - Projeto Fate Eight Tech" width="400" height="250" loading="lazy"
+                            onerror="this.src='src/images/portfolio/placeholder.svg'; this.alt='Preview DX Dedetizadora';">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>DX Dedetizadora</h3>
+                        <p class="portfolio-result">Aumento de 130% no número de clientes em 3 meses com Google Ads</p>
+                        <span class="portfolio-tag">Site Institucional + Google Ads</span>
+                    </div>
+                </a>
+                <a href="https://gmc-granja-mult-core.vercel.app/" target="_blank" rel="noopener noreferrer" class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="src/images/portfolio/gmc.webp" alt="GMC Gestão de Granja - Projeto Fate Eight Tech" width="400" height="250" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>GMC — Gestão de Granja</h3>
+                        <p class="portfolio-result">Projeto completo de gestão operacional, indicadores e acompanhamento</p>
+                        <span class="portfolio-tag">Sistema web · link provisório (demo Vercel)</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos" class="testimonials" aria-labelledby="depoimentos-title">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="depoimentos-title" class="section-title">Depoimentos</h2>
+                <p class="section-subtitle">Negócios que investiram em site + presença digital com a Fate Eight Tech</p>
+            </div>
+            <div class="testimonials-grid">
+                <article class="review-card" data-static-quote="true">
+                    <div class="testimonial-rating" aria-hidden="true">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">“A nova landing e o Google Ads mudaram nosso volume de orçamentos. Equipe da Fate Eight à altura do que promete.”</p>
+                    <footer class="testimonial-author">
+                        <div class="author-avatar" aria-hidden="true">SA</div>
+                        <div class="author-info">
+                            <h4>Susimar Alves</h4>
+                            <p>Global Solução · dedetização</p>
+                        </div>
+                    </footer>
+                </article>
+                <article class="review-card" data-static-quote="true">
+                    <div class="testimonial-rating" aria-hidden="true">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">“MPI integrado ao site trouxe mais clientes qualificados. Suporte rápido quando precisei ajustar campanha.”</p>
+                    <footer class="testimonial-author">
+                        <div class="author-avatar" aria-hidden="true">L</div>
+                        <div class="author-info">
+                            <h4>Lucas</h4>
+                            <p>Xequemate Serviços</p>
+                        </div>
+                    </footer>
+                </article>
+                <article class="review-card" data-static-quote="true">
+                    <div class="testimonial-rating" aria-hidden="true">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">“Site institucional claro para emergência 24h; aparecemos melhor no Google na região.”</p>
+                    <footer class="testimonial-author">
+                        <div class="author-avatar" aria-hidden="true">FC</div>
+                        <div class="author-info">
+                            <h4>Fernanda Costa</h4>
+                            <p>Exemplar Desentupidora · DF</p>
+                        </div>
+                    </footer>
+                </article>
+                <article class="review-card" data-static-quote="true">
+                    <div class="testimonial-rating" aria-hidden="true">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">“Identidade e narrativa do café ficaram profissionais; página rápida ajudou nas conversões.”</p>
+                    <footer class="testimonial-author">
+                        <div class="author-avatar" aria-hidden="true">CN</div>
+                        <div class="author-info">
+                            <h4>Cláudio Neto</h4>
+                            <p>Barão do Grão · café especial</p>
+                        </div>
+                    </footer>
+                </article>
+                <article class="review-card" data-static-quote="true">
+                    <div class="testimonial-rating" aria-hidden="true">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">“Campanhas e site alinhados; aumentamos contatos sem disparar o custo por lead.”</p>
+                    <footer class="testimonial-author">
+                        <div class="author-avatar" aria-hidden="true">RV</div>
+                        <div class="author-info">
+                            <h4>Renata Vieira</h4>
+                            <p>DX Dedetizadora</p>
+                        </div>
+                    </footer>
+                </article>
+                <article class="review-card" data-static-quote="true">
+                    <div class="testimonial-rating" aria-hidden="true">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">“Sistema web de gestão ficou estável e usável no campo; relatórios ajudam na decisão diária.”</p>
+                    <footer class="testimonial-author">
+                        <div class="author-avatar" aria-hidden="true">EM</div>
+                        <div class="author-info">
+                            <h4>Eduardo Mendes</h4>
+                            <p>GMC · gestão de granja</p>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Perguntas Frequentes</h2>
+                <p class="section-subtitle">Tire suas dúvidas sobre nossos serviços</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Quanto tempo leva para desenvolver um site?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O prazo varia conforme a complexidade do projeto. Sites institucionais simples ficam prontos
+                            em 2-3 semanas, enquanto projetos mais complexos como e-commerce podem levar de 6 a 12
+                            semanas.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Como funciona a gestão de Google Ads?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Realizamos uma análise completa do seu negócio, criamos campanhas segmentadas, fazemos
+                            otimizações diárias e fornecemos relatórios semanais com todas as métricas importantes.
+                            Nosso objetivo é maximizar seu ROI (Retorno sobre Investimento).</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Vocês oferecem suporte após a entrega do projeto?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim! Todos os nossos projetos incluem período de suporte técnico. Além disso, oferecemos
+                            planos de manutenção contínua para garantir que seu site ou sistema esteja sempre atualizado
+                            e funcionando perfeitamente.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Qual o investimento mínimo em Google Ads?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Recomendamos um investimento mínimo de R$ 30/dia para ter resultados consistentes. O valor
+                            ideal depende do seu segmento, concorrência e objetivos. Fazemos uma análise personalizada
+                            para recomendar o melhor orçamento.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Posso fazer alterações no site depois de pronto?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim! Após a finalização do site, é possível solicitar alterações. Nesse caso, realizamos uma
+                            nova avaliação do pedido, mas oferecemos condições especiais e descontos para clientes já
+                            cadastrados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="areas-atendidas" class="areas-atendidas" aria-labelledby="areas-title">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="areas-title" class="section-title">Alcance mundial · PT-BR e inglês</h2>
+                <p class="section-subtitle">Trabalhamos com clientes em qualquer lugar: alinhamento por videoconferência,
+                    contratos e suporte nos idiomas que combinarmos para o projeto.</p>
+            </div>
+            <div class="areas-global-inner">
+                <p class="areas-global-lead">Da primeira conversa ao lançamento, o fluxo é remoto e organizado — mesmo
+                    padrão de qualidade em landing pages, campanhas e sistemas, sem depender de cidade ou fuso.</p>
+                <div class="areas-global-grid">
+                    <article class="areas-global-card">
+                        <div class="areas-global-card-icon" aria-hidden="true"><i class="fas fa-video"></i></div>
+                        <h3 class="areas-global-card-title">Projeto remoto ponta a ponta</h3>
+                        <p>Briefings, revisões e entregas por chamadas e registros claros — menos atrito, mais ritmo.</p>
+                    </article>
+                    <article class="areas-global-card">
+                        <div class="areas-global-card-icon" aria-hidden="true"><i class="fas fa-language"></i></div>
+                        <h3 class="areas-global-card-title">Dois idiomas no fluxo</h3>
+                        <p>Prioridade para português brasileiro e inglês em contratos, alinhamentos e documentação quando
+                            fizer sentido.</p>
+                    </article>
+                    <article class="areas-global-card">
+                        <div class="areas-global-card-icon" aria-hidden="true"><i class="fas fa-layer-group"></i></div>
+                        <h3 class="areas-global-card-title">Um método só</h3>
+                        <p>Landing pages, tráfego pago e desenvolvimento seguem os mesmos critérios — onde você estiver.</p>
+                    </article>
+                </div>
+                <div class="areas-global-cta">
+                    <a href="en/index.html" class="btn btn-primary" lang="en" hreflang="en">English version</a>
+                    <p class="areas-global-note">Versão em inglês com visão dos serviços e do contato — o site principal
+                        continua em português.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contact-cta-strip" aria-labelledby="cta-contato-title">
+        <div class="container">
+            <h2 id="cta-contato-title" class="section-title">Vamos conversar?</h2>
+            <p class="section-subtitle">Use o formulário seguro com reCAPTCHA ou fale pelo WhatsApp após confirmar sua intenção.</p>
+            <div class="cta-row">
+                <a href="contato.html" class="btn btn-primary">Abrir formulário de contato</a>
+                <a href="https://wa.me/556190448973?text=Olá%2C%20gostaria%20de%20fazer%20um%20orçamento." class="btn btn-whatsapp js-wa-qualified" target="_blank" rel="noopener noreferrer">WhatsApp qualificado</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="src/images/logos/logo-32x32.png" alt="Fate Eight Tech" class="footer-logo-img" width="50" height="50" loading="lazy">
+                        <h3>Fate<span>Eight</span> Tech</h3>
+                    </div>
+                    <p>Assim como 8 bits criam a base da informação, nós criamos a base do seu sucesso.</p>
+                    <div class="footer-social">
+                        <a href="https://wa.me/556190448973?text=Olá%2C%20gostaria%20de%20fazer%20um%20orçamento." class="js-wa-qualified" target="_blank"
+                            rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://instagram.com/fateeighttech" target="_blank" aria-label="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@FateEightTech" target="_blank" aria-label="YouTube"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61582108484785" target="_blank"
+                            aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://github.com/fateeighttech" target="_blank" aria-label="Github"><i
+                                class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="servicos/criacao-de-site-profissional.html">Criação de Site</a></li>
+                        <li><a href="servicos/google-ads.html">Google Ads</a></li>
+                        <li><a href="servicos/otimizacao-seo.html">SEO</a></li>
+                        <li><a href="#anuncio-pago">Anúncio Pago</a></li>
+                        <li><a href="servicos/gestao-de-midias-sociais.html">Gestão de Mídias</a></li>
+                        <li><a href="servicos/google-meu-negocio.html">Google Meu Negócio</a></li>
+                        <li><a href="contato.html">Orçamento</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="#portfolio">Portfólio</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="https://wa.me/556190448973?text=Olá%2C%20gostaria%20de%20fazer%20um%20orçamento." class="js-wa-qualified" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><i class="fab fa-whatsapp"></i> (61) 9 9044-8973</li>
+                        <li><i class="fab fa-instagram"></i> @fateeighttech</li>
+                        <li><i class="fab fa-youtube"></i> @FateEightTech</li>
+                        <li><i class="fab fa-facebook"></i> @fateeighttech</li>
+                        <li><i class="fab fa-github"></i> fateeighttech</li>
+                        <li><i class="fas fa-clock"></i> Atendimento 24/7</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2026</span> Fate Eight Tech. Todos os direitos reservados.</p>
+                <div class="footer-links">
+                    <a href="termos.html">Termos de Serviço</a>
+                    <span>|</span>
+                    <a href="privacidade.html">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cookie-banner">
+        <span>Este site usa cookies do Google para fornecer serviços e analisar o tráfego.
+            <a href="https://policies.google.com/technologies/cookies?hl=pt-BR" target="_blank"
+                rel="noopener noreferrer">Saiba mais.</a>
+        </span>
+        <a id="cookie-accept">Ok, entendi.</a>
+    </div>
+
+    <a href="https://wa.me/556190448973?text=Olá%2C%20gostaria%20de%20fazer%20um%20orçamento." class="whatsapp-float js-wa-qualified"
+        target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp com confirmação">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <button type="button" class="scroll-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="src/js/main.js" defer></script>
+
+</body>
+
+</html>
