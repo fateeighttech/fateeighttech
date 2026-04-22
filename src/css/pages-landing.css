@@ -496,6 +496,42 @@ body.has-fixed-cta {
   margin: 8px;
 }
 
+/* Conteúdo extra nas páginas geradas (servicos/, regiao/) */
+.service-block {
+  margin-top: 28px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-color);
+}
+
+.service-block h2 {
+  margin-top: 0;
+}
+
+.service-checklist {
+  margin: 0 0 18px;
+  padding-left: 1.25rem;
+  list-style: none;
+}
+
+.service-checklist li {
+  position: relative;
+  margin-bottom: 12px;
+  padding-left: 1.35rem;
+  color: var(--text-light);
+  line-height: 1.65;
+}
+
+.service-checklist li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-cyan), var(--primary-yellow));
+}
+
 .skip-link {
   position: absolute;
   left: -9999px;
