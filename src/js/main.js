@@ -693,7 +693,6 @@
         if (!form) return;
         form.noValidate = true;
 
-        // garante input apiKey caso alguém submeta sem JS
         if (!form.querySelector('input[name="apiKey"]')) {
             const hidden = document.createElement('input');
             hidden.type = 'hidden';
@@ -771,7 +770,6 @@
                 formData.set('subject', (isFormLangEnglish() ? 'F8 quote request - ' : 'Orçamento da F8 - ')
                     + (form.service && form.service.value ? form.service.value : (isFormLangEnglish() ? 'Contact' : 'Contato')));
                 formData.set('g-recaptcha-response', token);
-                // algumas implementações publicadas do StaticForms usam 'accessKey' ou 'apiKey'
                 formData.set('apiKey', STATICFORMS_KEY);
                 formData.set('accessKey', STATICFORMS_KEY);
 
@@ -779,43 +777,57 @@
                 const controller = new AbortController();
                 const timeoutId = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
 
+                // redirect: 'manual' — o StaticForms responde com 302 para redirectTo (obrigado.html).
+                // Se o fetch seguisse o redirect, o navegador carregaria outro origin (ex.: localhost → produção)
+                // e falharia em CORS ("No 'Access-Control-Allow-Origin'"). Não seguimos; redirecionamos no cliente.
                 console.debug('Enviando POST para StaticForms...');
                 const resp = await fetch(STATICFORMS_ENDPOINT, {
                     method: 'POST',
                     body: formData,
                     headers: { 'Accept': 'application/json' },
                     signal: controller.signal,
-                    mode: 'cors'
+                    mode: 'cors',
+                    redirect: 'manual'
                 }).finally(() => clearTimeout(timeoutId));
 
-                console.info('StaticForms status:', resp.status, resp.statusText);
+                console.info('StaticForms status:', resp.status, resp.statusText, 'type:', resp.type);
 
-                let json = null;
-                let textBody = null;
-                const contentType = (resp.headers && resp.headers.get) ? (resp.headers.get('content-type') || '') : '';
-
-                try {
-                    if (contentType.includes('application/json')) {
-                        json = await resp.json();
-                        console.debug('Resposta JSON do servidor:', json);
-                    } else {
-                        textBody = await resp.text();
-                        console.debug('Resposta texto do servidor:', textBody);
-                    }
-                } catch (err) {
-                    console.warn('Falha ao parsear body do servidor:', err);
-                    try { textBody = await resp.text(); } catch (e) { /* ignore */ }
-                }
-
-                // --- início: detecção de sucesso mais robusta ---
                 const redirectTo = (form.querySelector('input[name="redirectTo"]') || {}).value || 'obrigado.html';
 
-                // Detecta sucesso por várias pistas: JSON, texto ou ausência de erro
+                const isApiRedirect =
+                    resp.type === 'opaqueredirect' ||
+                    (resp.status >= 300 && resp.status < 400);
+
+                // Ler o corpo uma única vez (resp.json()/text() consomem o stream; ler de novo lança).
+                // Resposta opaqueredirect não expõe corpo de forma legível.
+                let json = null;
+                let textBody = null;
+                if (resp.type !== 'opaqueredirect') {
+                    try {
+                        textBody = await resp.text();
+                        const trimmed = (textBody || '').trim();
+                        if (trimmed) {
+                            console.debug('Resposta bruta do servidor:', trimmed.slice(0, 500));
+                            if (trimmed.startsWith('{') || trimmed.startsWith('[')) {
+                                try {
+                                    json = JSON.parse(trimmed);
+                                    console.debug('Resposta JSON do servidor:', json);
+                                } catch (parseErr) {
+                                    console.warn('Corpo parece JSON mas não parseou:', parseErr);
+                                }
+                            }
+                        }
+                    } catch (readErr) {
+                        console.warn('Falha ao ler corpo da resposta:', readErr);
+                    }
+                }
+
+                // --- detecção de sucesso ---
                 const bodyIndicatesSuccess = (json && (json.success === true || /success|ok|enviado|obrigad/i.test(json.message || '')));
                 const textIndicatesSuccess = (typeof textBody === 'string' && /success|ok|enviado|obrigad|thank you/i.test(textBody));
-                const noBodyButOk = resp.ok && !json && !textBody; // fallback quando não conseguimos ler corpo
+                const noBodyButOk = resp.ok && !json && !textBody;
 
-                if (resp.ok && (bodyIndicatesSuccess || textIndicatesSuccess || noBodyButOk)) {
+                if (isApiRedirect || (resp.ok && (bodyIndicatesSuccess || textIndicatesSuccess || noBodyButOk))) {
                     console.info('Envio detectado como SUCCESS. redirecionando para:', redirectTo);
                     if (dxQualifiesFormConversion()) {
                         dxGtagEvent('dx_form_submit_success');

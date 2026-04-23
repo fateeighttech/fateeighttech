@@ -749,3 +749,37 @@ body.has-fixed-cta {
     animation: none !important;
   }
 }
+
+/* Página contato — ações primárias em duas colunas (~50% / 50%) */
+.contact-form .form-buttons.form-buttons--split {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 12px;
+  margin-top: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form .form-buttons.form-buttons--split > .btn,
+.contact-form .form-buttons.form-buttons--split > a.btn {
+  flex: 1 1 calc(50% - 6px);
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-left: max(14px, 0.85em);
+  padding-right: max(14px, 0.85em);
+  white-space: normal;
+  line-height: 1.25;
+}
+
+@media (max-width: 360px) {
+  .contact-form .form-buttons.form-buttons--split > .btn,
+  .contact-form .form-buttons.form-buttons--split > a.btn {
+    flex: 1 1 100%;
+  }
+}
