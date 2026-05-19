@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://fateeight.com.br/src/images/logos/logo-hero.jpg" alt="Fate Eight Tech" width="200"/>
+<img src="http://fateeight.com.br/src/images/logos/logo-hero.webp" alt="Fate Eight Tech" width="200"/>
 
 # ⚡ Fate Eight Tech
 
